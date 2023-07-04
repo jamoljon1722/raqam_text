@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Poppins&family=Roboto&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        h2 {
+            position: relative;
+            bottom: 10px;
+        }
+        
+        .text {
+            text-align: center;
+            font-size: 40px;
+            padding-top: 20px;
+        }
+        
+        .box {
+            border: 1px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 100px;
+            width: 400px;
+            height: 500px;
+        }
+        
+        .box input {
+            margin-top: 10px;
+            width: 220px;
+            height: 30px;
+            padding-left: 5px;
+            border: 1px solid #000;
+            border-radius: 8px;
+        }
+        
+        .btn {
+            margin-top: 10px;
+            width: 130px;
+            height: 28px;
+            font-size: 1em;
+            background: none;
+            border: 1px solid #000;
+            border-radius: 10px;
+        }
+        
+        .btn:active {
+            font-size: 15px;
+        }
+        
+        .btn2 {
+            margin-top: 20px;
+            width: 160px;
+            height: 30px;
+            font-size: 1em;
+            background: none;
+            border: 1px solid #000;
+            display: none;
+        }
+        
+        .open-btn {
+            display: block;
+        }
+        
+        @media only screen and (max-width: 360px) {
+            .box {
+                width: 320px;
+            }
+        }
+        
+    </style>
+    
+    <div class="container">
+        <div class="box">
+            <h2>Developed By Ja3oli</h2>
+            <input class="inp1" type="text" placeholder="So'z Kiriting">
+            <input class="inp2" type="text" placeholder="Nechi Qator So'z Chiqishi">
+            <input class="inp3" type="text" placeholder="Maslahatim 1 kiriting">
+            <button class="btn">Start</button>
+        </div>
+        <button class="btn2">Nusxani Kochirish</button>
+    </div>
+    
+    <h1 class="text" id="textcha"></h1>
+    <script src="./app.js"></script>
+</body>
+</html>
