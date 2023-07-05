@@ -2,7 +2,7 @@ const inp1 = document.querySelector(".inp1");
 const inp2 = document.querySelector(".inp2");
 const inp3 = document.querySelector(".inp3");
 const btn = document.querySelector(".btn");
-const btn_copy = document.querySelector(".btn2");
+const btn_copy = document.querySelector(".btn2")
 const text = document.querySelector(".text");
 
 btn.addEventListener("click", ()=>{
@@ -17,26 +17,15 @@ btn.addEventListener("click", ()=>{
         document.getElementById("textcha").innerHTML += ` ${ i } <br>`
     }
     
-    // btn_copy.classList.add("open-btn")
+    btn_copy.classList.add("open-btn")
 })
 
-// btn_copy.addEventListener("click", ()=> {
-//     function copyText(htmlElement) {
-//         if(!htmlElement) {
-//             return;
-//         }
-        
-//         let elementText = htmlElement.innerHTML;
-        
-//         let inputElement = document.createElement('input');
-//         inputElement.setAttribute('value', elementText);
-//         document.body.appendChild(inputElement);
-//         inputElement.select();
-//         document.execCommand('copy');
-//         inputElement.parentNode.removeChild(inputElement);
-        
-//     }
-//     copyText(document.querySelector(".text"))
-    
-//     alert("Nusxa Kochirildi :)")
-// })
+const copyToClipBoard = () => {
+    const copyContent = document.querySelector(".text");
+    navigator.clipboard.writeText(copyContent.innerText);
+}
+
+btn_copy.addEventListener("click", ()=> {
+    copyToClipBoard()
+    alert("Nusxa Kochirildi")
+})
